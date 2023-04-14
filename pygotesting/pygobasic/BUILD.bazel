@@ -1,0 +1,9 @@
+load("//:rules.bzl", "pygo_go_binary")
+
+# TODO: go_library(...)
+
+pygo_go_binary(
+    name = "pygobasic",
+    embed = [":go_default_library"],
+    visibility = ["//pygotesting:__subpackages__"],
+)
